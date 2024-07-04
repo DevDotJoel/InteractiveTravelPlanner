@@ -1,8 +1,4 @@
-from typing import List
-
 from fastapi.responses import RedirectResponse
-from configs.Enviroment import get_environment_variables
-from models import SuggestionModel, TravelPreferencesModel
 from routers.TravelRouter import TravelRouterRouter
 from services import TravelService
 from fastapi import  FastAPI

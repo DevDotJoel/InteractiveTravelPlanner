@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List
 from models.SuggestionModel import SuggestionModel
 from models.TravelPreferencesModel import TravelPreferencesModel
 from services.TravelService import TravelService
