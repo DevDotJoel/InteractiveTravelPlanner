@@ -6,7 +6,7 @@
   <li>Users can input their travel preferences, including travel type and activities</li>
   <li>The application uses OpenAI's GPT-3.5 to generate personalized travel suggestions.</li>
   <li>Suggestions include destinations, activities, and itineraries.</li>
-  <li>The frontend is built with SvelteKit for a modern and responsive user experience.</li>
+  <li>The frontend is built with SvelteKit </li>
   <li>The backend is built with Python FastAPI</li>
 </ul>
 <h2>Tech Stack</h2>
