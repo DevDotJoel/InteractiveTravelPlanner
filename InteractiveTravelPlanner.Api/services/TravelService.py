@@ -8,7 +8,6 @@ env = get_environment_variables()
 
 
 client = openai.OpenAI(
-    # defaults to os.environ.get("OPENAI_API_KEY")
     api_key=env.OPENAI_KEY,
 )
 expected_result = {
