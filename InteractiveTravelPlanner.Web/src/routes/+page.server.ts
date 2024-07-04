@@ -35,9 +35,7 @@ export const load = async () => {
 export const actions = {
 	suggestions: async ({ request }) => {
 		const form = await superValidate(request, zod(schema));
-		console.log(form);
 		if (!form.valid) {
-			// Again, return { form } and things will just work.
 			return fail(400, { form });
 		}
 
@@ -60,7 +58,8 @@ export const actions = {
 				suggestions: data
 			});
 		} catch (error) {
-			return fail(400, { form });
+			console.log(error);
+			return message(form, { error: 'An error occurred' });
 		}
 	}
 };

@@ -16,13 +16,20 @@
 						<h2>
 							<b>Travel Planner</b>
 						</h2>
-						<div class="text-muted">Select of your favorite type of vactions</div>
+						<div class="text-muted">Select your preferences</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+{#if $message?.error}
+	<div class="row mt-2">
+		<div class="col">
+			<span class="invalid-feedback d-block">{$message?.error}</span>
+		</div>
+	</div>
+{/if}
 <div class="row mt-3">
 	<div class="col">
 		<div class="card rounded-3 border-0" aria-hidden="true">
@@ -50,7 +57,7 @@
 							</div>
 							<div class="row mt-2">
 								<div class="col">
-									<label class="text-muted" for="activityType"> Activity Type</label>
+									<label class="text-muted" for="activityType"> Activities</label>
 									<select
 										class={`form-select rounded-3 ${$errors.activityType?._errors ? 'is-invalid' : ''}`}
 										name="activityType"
@@ -80,6 +87,7 @@
 		</div>
 	</div>
 </div>
+
 {#if $message?.suggestions}
 	<div class="row mt-2">
 		<div class="col">
