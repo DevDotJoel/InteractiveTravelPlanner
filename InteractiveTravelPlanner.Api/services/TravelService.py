@@ -11,7 +11,7 @@ client = openai.OpenAI(
     # defaults to os.environ.get("OPENAI_API_KEY")
     api_key=env.OPENAI_KEY,
 )
-example_json = {
+expected_result = {
     "suggestions": [
         {
             "country": "Country",
@@ -43,7 +43,7 @@ class TravelService:
             response_format={"type": "json_object"},
             messages=[
                 {"role": "system", "content": "Provide output in valid JSON. The data schema should be like this: " +
-                    json.dumps(example_json)},
+                    json.dumps(expected_result)},
                 {"role": "user", "content": prompt}
             ],
             max_tokens=500,)
